@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Chamados com IA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Chamados com IA</h1>
+    <form id="ticketForm">
+      <label for="title">Título do chamado*:</label>
+      <input type="text" id="title" required placeholder="Digite o título do chamado">
+
+      <label for="customerReport">Relato do Cliente*:</label>
+      <textarea id="customerReport" required placeholder="Descreva o relato do cliente"></textarea>
+
+      <label for="priority">Prioridade*:</label>
+      <select id="priority" required>
+        <option value="P0">P0 - Crítica</option>
+        <option value="P1">P1 - Alta</option>
+        <option value="P2">P2 - Alta</option>
+        <option value="P3">P3 - Média</option>
+        <option value="P5">P5 - Baixa</option>
+        <option value="P6">P6 - Baixa</option>
+        <option value="P7">P7 - Muito Baixa</option>
+      </select>
+
+      <label for="requesterName">Nome Solicitante*:</label>
+      <input type="text" id="requesterName" required placeholder="Digite o nome do solicitante">
+
+      <label for="contactPhone">Telefone de Contato:</label>
+      <input type="text" id="contactPhone" placeholder="Digite o telefone de contato">
+
+      <label for="technicalDescription">Descrição Técnica:</label>
+      <textarea id="technicalDescription" placeholder="Descreva tecnicamente o problema"></textarea>
+
+      <button type="submit">Gerar Chamado</button>
+    </form>
+
+    <div id="logContainer">
+      <h2>Chamados Registrados</h2>
+      <ul id="ticketLogs"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
